@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .app {
@@ -15,16 +16,6 @@
   background-color: #f67e7d;
 }
 
-main {
-  min-height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.75)
-  );
-  padding: 25px;
-}
-
 .weather-box .temp {
   position: relative;
   display: inline-block;
@@ -35,6 +26,7 @@ main {
   padding: 15px 25px;
 
   color: #fff;
+
   font-size: 102px;
   font-weight: 900;
 

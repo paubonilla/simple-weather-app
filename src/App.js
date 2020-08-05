@@ -13,6 +13,19 @@ export const Inner = styled.div`
   margin: 0 auto;
 `
 
+export const Content = styled.div`
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 export const SearchBox = styled.div`
   width: 100%;
   margin: 0 0 75px;
@@ -53,8 +66,7 @@ export const DateStyle = styled.div`
   color: #e8e8e8;
   font-size: 20px;
   font-weight: 300;
-  font-style: italic;
-  text-align: center;
+  font-family: 'Noto Serif JP', serif;
   text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 `
 
@@ -87,6 +99,8 @@ export const WeatherContainer = styled.div`
 
   > .weatherDesc {
     color: #e8e8e8;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
   }
 `
 
@@ -127,7 +141,7 @@ function App() {
     <Container>
       <Inner>
         <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
-          <main>
+          <Content>
             <SearchBox>
               <input
                 type="text"
@@ -153,7 +167,7 @@ function App() {
                 </WeatherContainer>
               </>
             ) : ('')}
-          </main>
+          </Content>
         </div>
       </Inner>
     </Container>
